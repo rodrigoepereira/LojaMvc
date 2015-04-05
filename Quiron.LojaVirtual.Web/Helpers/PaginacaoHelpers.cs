@@ -11,7 +11,7 @@ namespace Quiron.LojaVirtual.Web.Helpers
     public static class PaginacaoHelpers
     {
 
-        public static MvcHtmlString PageLinks(this HtmlHelper html, Paginacao paginacao, Func<int, string> paginaUrl)
+        public static MvcHtmlString PageLinks(this HtmlHelper html, Paginacao paginacao, Func<int,string> paginaUrl)
         {
             StringBuilder resultado = new StringBuilder();
 
@@ -24,10 +24,10 @@ namespace Quiron.LojaVirtual.Web.Helpers
                 if (i == paginacao.PaginaAtual)
                 {
                     tag.AddCssClass("selected");
-                    tag.AddCssClass("btn-primary");
+                    tag.AddCssClass("btn btn-sm btn-primary");
 
                 }
-                tag.AddCssClass("btn-default");
+                tag.AddCssClass("btn btn-sm btn-default");
 
                 resultado.Append(tag);
 
