@@ -11,9 +11,9 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
     {
         private readonly EfDbContext contexto = new EfDbContext();
 
-        public IEnumerable<Produto> todosProduto() {
+        public IEnumerable<Produto> todosProduto {
 
-            return contexto.Produtos;
+            get { return contexto.Produtos; }
         
         }
 
