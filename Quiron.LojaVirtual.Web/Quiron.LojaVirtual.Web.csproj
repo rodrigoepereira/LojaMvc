@@ -111,12 +111,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarrinhoController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\VitrineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\PaginacaoHelpers.cs" />
+    <Compile Include="Models\CarrinhoViewModel.cs" />
     <Compile Include="Models\Paginacao.cs" />
     <Compile Include="Models\ProdutosViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +133,9 @@
     <Content Include="Views\Produtos\Index.cshtml" />
     <Content Include="Views\Vitrine\ListaProdutos.cshtml" />
     <Content Include="Views\Shared\ProdutoDetalhes.cshtml" />
+    <Content Include="Views\Categoria\Menu.cshtml" />
+    <Content Include="Views\Carrinho\Index.cshtml" />
+    <Content Include="Views\Carrinho\Resumo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

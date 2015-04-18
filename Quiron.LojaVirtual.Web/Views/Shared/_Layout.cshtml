@@ -16,14 +16,16 @@
    
     <div class="navbar navbar-inverse" role="navigation">
         <a class="navbar-brand" href="#">Loja Virtual do Rodrigo </a>
+        @Html.Action("Resumo", "Carrinho")
     </div>
 
     <div class="row panel">
         <div id="categorias" class="col-xs-3">
-                 Minhas Categorias
+                @Html.Action("Menu","Categoria")
+
         </div>
 
-        <div id="categorias" class="col-xs-5">
+        <div id="categorias" class="col-xs-8">
             @RenderBody()
         </div>
 

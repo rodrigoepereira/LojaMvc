@@ -33,7 +33,7 @@ namespace Quiron.LojaVirtual.Web.Controllers
             Paginacao pg = new Paginacao();
             pg.PaginaAtual = pagina;
             pg.ItensPorPagina = ProdutoPorPagina;
-            pg.TotalDeItens = p.todosProduto.Count();
+            pg.TotalDeItens = categoria == "" ? p.todosProduto.Count() : p.todosProduto.Count(x => x.Categoria.Contains(categoria));
 
             ProdutosViewModel model = new ProdutosViewModel();
             model.Produtos = produto;
