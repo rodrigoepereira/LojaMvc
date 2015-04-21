@@ -87,6 +87,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ErroEstilo.css" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -136,6 +137,8 @@
     <Content Include="Views\Categoria\Menu.cshtml" />
     <Content Include="Views\Carrinho\Index.cshtml" />
     <Content Include="Views\Carrinho\Resumo.cshtml" />
+    <Content Include="Views\Carrinho\FecharPedido.cshtml" />
+    <Content Include="Views\Carrinho\PedidoConcluido.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

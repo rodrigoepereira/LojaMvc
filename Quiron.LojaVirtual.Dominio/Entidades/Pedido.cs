@@ -23,6 +23,10 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
         [Display(Name = "Complemento:")]
         public string Complemento { get; set; }
 
+        [Required(ErrorMessage = "Informe a uf")]
+        [Display(Name = "UF:")]
+        public string Uf { get; set; }
+
         [Required(ErrorMessage = "Informe a cidade")]
         [Display(Name = "Cidade:")]
         public string Cidade { get; set; }
