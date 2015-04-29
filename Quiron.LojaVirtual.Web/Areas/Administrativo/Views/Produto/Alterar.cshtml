@@ -1,0 +1,64 @@
+﻿@model Quiron.LojaVirtual.Dominio.Entidades.Produto
+
+@{
+    Layout = "~/Areas/Administrativo/Views/Shared/_AdministrativoLayout.cshtml";
+    ViewBag.Title = "Alteração de produtos";
+}
+
+<div class="panel-heading">
+
+    <h2>  @Model.Nome        </h2>
+
+</div>
+
+
+
+
+@using (Html.BeginForm("Alterar","Produto"))
+{
+    //  @Html.EditorForModel(); gera automaticamente os campos
+
+    <div class="panel-body">
+        @Html.HiddenFor(x => x.ProdutoId)
+
+        @foreach (var p in ViewData.ModelMetadata.Properties)
+        {
+
+            if (p.PropertyName != "ProdutoId")
+            {
+
+                if (p.PropertyName == "Descricao")
+                {
+                    <div class="form-group">
+                        <label>@(p.DisplayName ?? p.PropertyName)</label>
+                        @Html.TextArea(p.PropertyName, null, new { @class = "form-control", rows = 5 })
+                    </div>
+                }
+                else
+                {
+
+                    <div class="form-group">
+                        <label>@(p.DisplayName ?? p.PropertyName)</label>
+                        @Html.TextBox(p.PropertyName, null, new { @class = "form-control" })
+                    </div>
+                }
+                
+               @Html.ValidationMessage(p.PropertyName);
+               // @Html.ValidationSummary();
+
+            }
+
+        }
+
+
+      <div class="panel-footer">
+          <input type="submit" value="Salvar" class="btn btn-primary" />
+          @Html.ActionLink("Cancelar e retornar", "Index", null, new { @class = "btn btn-warning" })
+      </div>
+        
+
+        
+
+    </div>
+}
+
