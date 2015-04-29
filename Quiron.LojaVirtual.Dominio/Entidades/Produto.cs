@@ -23,7 +23,8 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
         public string Descricao { get; set; }
 
         [Required(ErrorMessage = "O campo preço é obrigatório")]
-        [Range(0.01,Double.MaxValue,ErrorMessage="Valor Inválido")]
+        [Range(0.01,Double.MaxValue,ErrorMessage="Valor deve ser maior 0,01")]
+        [RegularExpression(@"[0-9]+$", ErrorMessage="Deve ser informado números")]
         public decimal Preco { get; set; }
 
         [Required(ErrorMessage = "O campo categoria é obrigatório")]
