@@ -5,7 +5,10 @@
     Layout = "~/Areas/Administrativo/Views/Shared/_AdministrativoLayout.cshtml";
 }
 
-<div class="alert alert-success" id="mensagem"></div>
+@*<div class="alert alert-success" id="mensagem"></div>*@
+
+
+<div id="divexcluir"></div>
 
 
 
@@ -58,8 +61,8 @@
                                 <input type="submit" class="btn btn-xs btn-danger" value="Excluir" />
                             }*@
 
-                            <input type="submit" id="@item.ProdutoId" name="@item.Nome" class="btn btn-default" value="Excluir" data-toggle="tooltip" data-placement="left" title="Exclui o produto" />
-                                                     
+                            <input type="submit" id="@item.ProdutoId" name="@item.Nome" class="btn btn-xs btn-danger" value="Excluir" data-toggle="tooltip" data-placement="left" title="Exclui o produto" />
+                           
 
                         </td>
 
